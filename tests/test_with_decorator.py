@@ -32,6 +32,6 @@ def open_issue_tab():
     browser.element("#issues-tab").click()
 
 
-@allure.step("Проверяем наличие ишью с номером 76")
+@allure.step("Проверяем наличие ишью с номером {number}")
 def should_see_issue_with_number(number):
     browser.element(by.partial_text("#" + number)).should(be.visible)
